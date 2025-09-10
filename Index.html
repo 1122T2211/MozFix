@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>MozFix Web</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#0a7cff" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Optional: TF.js for real model later -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.18.0/dist/tf.min.js"></script> -->
+</head>
+<body>
+  <header>
+    <h1>MozFix</h1>
+    <p class="sub">Identify the likely mosquito type and fix sources at home.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Where & when</h2>
+      <div class="grid">
+        <label>ZIP
+          <input id="zip" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="10" placeholder="e.g., 20171" />
+        </label>
+        <label>Indoors?
+          <select id="indoor">
+            <option value="true" selected>Yes</option>
+            <option value="false">No</option>
+          </select>
+        </label>
+        <label>Room
+          <input id="room" type="text" placeholder="Kitchen, bathroom, patio…" />
+        </label>
+        <label>Time of day
+          <select id="tod">
+            <option value="Day">Day</option>
+            <option value="Dusk">Dusk</option>
+            <option value="Night">Night</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Pick or snap a photo</h2>
+      <p class="hint">Place the mosquito on white paper with a coin for scale. Bright, in-focus photo works best.</p>
+
+      <!-- iOS-friendly photo input (opens Camera or Library) -->
+      <input id="fileInput" type="file" accept="image/*;capture=environment" />
+
+      <div id="previewWrap" class="preview hidden">
+        <img id="preview" alt="preview" />
+      </div>
+
+      <button id="identifyBtn" class="primary" disabled>Identify mosquito</button>
+      <div id="progress" class="progress hidden">Identifying…</div>
+    </section>
+
+    <section id="resultSection" class="card hidden">
+      <h2>Result</h2>
+      <div id="topMatch" class="row"></div>
+      <div id="otherMatches"></div>
+      <hr />
+      <h3>Likely sources & fixes</h3>
+      <div id="advice"></div>
+    </section>
+  </main>
+
+  <footer>
+    <button id="installBtn" class="secondary hidden">Install app</button>
+  </footer>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
