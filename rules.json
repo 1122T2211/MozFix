@@ -1,0 +1,37 @@
+{
+  "Aedes": {
+    "title": "Likely container breeder nearby",
+    "checks": [
+      "Empty & scrub flowerpot saucers and plant trays weekly",
+      "Store buckets, bins, toys, and tarps upside down",
+      "Clean gutters; remove leaf clogs",
+      "Replace water in vases & pet bowls every 2–3 days",
+      "Use BTI dunks where you cannot drain water"
+    ]
+  },
+  "Culex": {
+    "title": "Likely stagnant/organic water source",
+    "checks": [
+      "Refresh birdbaths every 2–3 days or add a bubbler",
+      "Check storm drains/catch basins for blockage",
+      "Maintain window/door screens; seal gaps",
+      "Treat non-drainable water with labeled larvicide (follow label)"
+    ]
+  },
+  "Anopheles": {
+    "title": "Likely sunlit standing water (ponds/ditches)",
+    "checks": [
+      "Drain or re-grade low spots where water collects",
+      "Trim vegetation at pond edges to reduce resting spots",
+      "Consider targeted larviciding for larger features (follow label)"
+    ]
+  },
+  "Not mosquito": {
+    "title": "Likely gnat/moth fly—different fixes",
+    "checks": [
+      "Check for over-watered houseplants (fungus gnats)",
+      "Clean sink and floor drains with a drain brush",
+      "Run a dehumidifier in damp rooms"
+    ]
+  }
+}
